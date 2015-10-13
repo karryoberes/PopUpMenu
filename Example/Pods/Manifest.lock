@@ -1,0 +1,14 @@
+PODS:
+  - PopUpMenu (0.1.0)
+
+DEPENDENCIES:
+  - PopUpMenu (from `../`)
+
+EXTERNAL SOURCES:
+  PopUpMenu:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PopUpMenu: 7e9cd56aaf83c2d9859c2c02741a99effc2c2cb9
+
+COCOAPODS: 0.39.0
