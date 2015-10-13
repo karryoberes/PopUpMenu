@@ -128,8 +128,11 @@ public class PopUpViewController: UIViewController {
                 menuButton.setBackgroundImage(UIImage(named: backgroundHighlightedImage), forState: .Highlighted)
             }
             
-            menuButton.setImage(UIImage(named: buttonNormalIcons[index] as! String), forState: .Normal)
-            menuButton.setImage(UIImage(named: buttonHighlightedIcons[index] as! String), forState: .Highlighted)
+            if (buttonNormalIcons.count >= 1 && buttonHighlightedIcons.count >= 1) {
+                menuButton.setImage(UIImage(named: buttonNormalIcons[index] as! String), forState: .Normal)
+                menuButton.setImage(UIImage(named: buttonHighlightedIcons[index] as! String), forState: .Highlighted)
+                menuButton.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+            }
             
             menuButton.setTitle(title as! NSString as String, forState: .Normal)
             menuButton.titleLabel?.font = buttonFont

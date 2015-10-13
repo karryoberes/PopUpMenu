@@ -48,7 +48,7 @@ public class PopUpButton: UIButton, PopUpViewDelegate {
     private var bSColor: UIColor!
     private var bFont: UIFont!
     
-    var delegate: PopUpButtonDelegate?
+    public var delegate: PopUpButtonDelegate?
     
     
     
@@ -73,7 +73,7 @@ public class PopUpButton: UIButton, PopUpViewDelegate {
         menuIconsHighlighted = menuIconHighlighted.mutableCopy() as! NSMutableArray
         
         // MENU BUTTON
-        menuButton = UIButton(frame: CGRectMake(0, 0, menuImage.size.width - 10, menuImage.size.height - 10))
+        menuButton = UIButton(frame: CGRectMake(0, 0, menuImage.size.width, menuImage.size.height))
         menuButton!.setImage(menuImage, forState: .Normal)
         menuButton!.userInteractionEnabled = true
         

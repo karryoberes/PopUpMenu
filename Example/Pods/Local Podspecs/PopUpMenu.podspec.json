@@ -1,15 +1,15 @@
 {
   "name": "PopUpMenu",
   "version": "0.1.0",
-  "summary": "A short description of PopUpMenu.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/PopUpMenu",
+  "summary": "A subclass on UIButton and UIViewController that provides a button that shows a PopUp Menu once it is long pressed.",
+  "description": "This CocoaPod provides the ability to add a floating button in a view. Once long pressed, a customizable PopUp Menu is shown.",
+  "homepage": "https://github.com/karryoberes/PopUpMenu",
   "license": "MIT",
   "authors": {
     "Oberes, Karry Raia C.": "karry.raia.c.oberes@accenture.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/PopUpMenu.git",
+    "git": "https://github.com/karryoberes/PopUpMenu.git",
     "tag": "0.1.0"
   },
   "platforms": {
