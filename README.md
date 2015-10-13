@@ -22,7 +22,14 @@ self.view.addSubview(menu)
 ###For Objective C
 ```objc
 @import PopUpMenu;
+
+PopUpButton *menu = [[PopUpButton alloc]initWithPosition:CGPointMake(0, 0) frame:CGRectMake(7, 30, 35, 35) menuImage:image menuListTitle:@[@"Menu1", @"Menu2", @"Menu3", @"Menu4"] menuIconNormal:@[@"Menu1", @"Menu2", @"Menu3", @"Menu4"] menuIconHighlighted:@[@"Menu1H", @"Menu2H", @"Menu3H", @"Menu4H"] menuBackgroundImage:@"" menuBackgroundHighlightedImage:@""];
+
+[menu getProperties:[[UIColor blackColor] colorWithAlphaComponent:0.7] buttonTitleHighlightedColor:[UIColor whiteColor] buttonBackgroundColor:[UIColor colorWithRed:17/255.0 green:193/255.0 blue:210/255.0 alpha:1] buttonSeparatorColor:[UIColor darkGrayColor] buttonFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:20]];
+
+[self.view addSubview:menu];
 ```
+
 ###Example Project
 Run the Example Project to see the whole sample code on how to use the PopUpMenu pod in a project.
 
