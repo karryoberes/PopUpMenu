@@ -26,6 +26,7 @@ import UIKit
     optional func handleButton15Pressed()
 }
 
+/// Sets the current instance to its self
 private struct PrivateInstance {
     static var currentInstance: PopUpViewController!
 }
@@ -56,8 +57,19 @@ public class PopUpViewController: UIViewController {
     var returnToNormalWhenSelected = true
     
     
-    // MARK: INITIALIZE BUTTON PROPERTIES
+    // MARK: INITIALIZE POPUP MENU PROPERTIES
+    /**
+    Initializes a view controller with the provided specifications from the PopUp Button.
     
+    - Parameters:
+    - menuButtonTitles: The list of the titles for the PopUp View Controller (PopUp Menu), in an Array of String
+    - menuButtonNormalIcons: The list of the image names for the PopUp View Controller (PopUp Menu) for Normal State
+    - menuButtonHighlightedIcons: The list of the image names for the PopUp View Controller (PopUp Menu) for Highlighted State
+    - menuBGImage: The background image for the menus inside the PopUp View Controller (PopUp Menu) for Normal State
+    - menuHBGImage: The background image for the menus inside the PopUp View Controller (PopUp Menu) for Highlighted State
+    
+    - Returns: A custom PopUp Menu.
+    */
     convenience init(menuButtonTitles: NSArray!, menuButtonNormalIcons: NSArray!, menuButtonHighlightedIcons: NSArray!, menuBGImage: String!, menuHBGImage: String!) {
         self.init()
         
@@ -85,6 +97,10 @@ public class PopUpViewController: UIViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
+    /**
+    Initializes the view's frame and properties of the PopUp Menu.
+    Adds a gesture recognizer that once the user taps oustide the view, it will dismiss the presented view.
+    */
     override public func viewDidLoad() {
         super.viewDidLoad()
         
@@ -98,20 +114,26 @@ public class PopUpViewController: UIViewController {
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action:"hide"))
     }
     
+    /// Once the view will appear it calls the createMenuView.
     override public func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         self.createMenuView()
     }
     
+    /// Once the view appeared it sets the current instance to its self.
     override public func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         PrivateInstance.currentInstance = self
     }
     
     
-    // CREATE VIEW
-    
+    // MARK: CREATE VIEW FOR POPUP MENU
+    /**
+    This function is set to create the view for the PopUp Menu.
+    Sets the button's frame and its properties and adds it into the view.
+    Initializes the view's frame and its properties.
+    */
     func createMenuView() {
         
         menuView = UIView()
@@ -183,8 +205,8 @@ public class PopUpViewController: UIViewController {
         self.view.addSubview(menuView)
     }
     
-    // SHOW VIEW WHEN MENU BUTTON IS SELECTED
-    
+    // MARK: SHOW VIEW WHEN MENU BUTTON IS SELECTED
+    /// This function is used and called to present the view with animation and dim view background.
     func show() {
         self.view.alpha = 1.0
         UIView.animateWithDuration(0.3, animations: { () -> Void in
@@ -193,8 +215,8 @@ public class PopUpViewController: UIViewController {
     }
     
     
-    // HIDE VIEW WHEN SUB MENU BUTTON IS SELECTED
-    
+    // MARK: HIDE VIEW WHEN SUB MENU BUTTON IS SELECTED
+    /// This function is used and called to dismiss the view with animation and return to its normal view background.
     func hide() {
         if returnToNormalWhenSelected {
             UIView.animateWithDuration(0.3, animations: { () -> Void in
@@ -207,6 +229,7 @@ public class PopUpViewController: UIViewController {
     
     // MARK: SUB MENU BUTTON DELEGATE
     
+    ///Hides the view and call the handleButton1Pressed delegate when the 1st menu button is pressed.
     public func handleButton1Pressed() {
         if self.delegate != nil {
             hide()
@@ -214,6 +237,7 @@ public class PopUpViewController: UIViewController {
         }
     }
     
+    ///Hides the view and call the handleButton2Pressed delegate when the 2nd menu button is pressed.
     public func handleButton2Pressed() {
         if self.delegate != nil {
             hide()
@@ -221,6 +245,7 @@ public class PopUpViewController: UIViewController {
         }
     }
     
+    ///Hides the view and call the handleButton3Pressed delegate when the 3rd menu button is pressed.
     public func handleButton3Pressed() {
         if self.delegate != nil {
             hide()
@@ -228,6 +253,7 @@ public class PopUpViewController: UIViewController {
         }
     }
     
+    ///Hides the view and call the handleButton4Pressed delegate when the 4th menu button is pressed.
     public func handleButton4Pressed() {
         if self.delegate != nil {
             hide()
@@ -235,6 +261,7 @@ public class PopUpViewController: UIViewController {
         }
     }
     
+    ///Hides the view and call the handleButton5Pressed delegate when the 5th menu button is pressed.
     public func handleButton5Pressed() {
         if self.delegate != nil {
             hide()
@@ -242,6 +269,7 @@ public class PopUpViewController: UIViewController {
         }
     }
     
+    ///Hides the view and call the handleButton6Pressed delegate when the 6th menu button is pressed.
     public func handleButton6Pressed() {
         if self.delegate != nil {
             hide()
@@ -249,6 +277,7 @@ public class PopUpViewController: UIViewController {
         }
     }
     
+    ///Hides the view and call the handleButton7Pressed delegate when the 7th menu button is pressed.
     public func handleButton7Pressed() {
         if self.delegate != nil {
             hide()
@@ -256,6 +285,7 @@ public class PopUpViewController: UIViewController {
         }
     }
     
+    ///Call the handleButton8Pressed delegate when the 8th menu button is pressed.
     public func handleButton8Pressed() {
         if self.delegate != nil {
             hide()
@@ -263,6 +293,7 @@ public class PopUpViewController: UIViewController {
         }
     }
     
+    ///Hides the view and call the handleButton9Pressed delegate when the 9th menu button is pressed.
     public func handleButton9Pressed() {
         if self.delegate != nil {
             hide()
@@ -270,6 +301,7 @@ public class PopUpViewController: UIViewController {
         }
     }
     
+    ///Hides the view and call the handleButton10Pressed delegate when the 10th menu button is pressed.
     public func handleButton10Pressed() {
         if self.delegate != nil {
             hide()
@@ -277,6 +309,7 @@ public class PopUpViewController: UIViewController {
         }
     }
     
+    ///Hides the view and call the handleButton11Pressed delegate when the 11th menu button is pressed.
     public func handleButton11Pressed() {
         if self.delegate != nil {
             hide()
@@ -284,6 +317,7 @@ public class PopUpViewController: UIViewController {
         }
     }
     
+    ///Hides the view and call the handleButton12Pressed delegate when the 12th menu button is pressed.
     public func handleButton12Pressed() {
         if self.delegate != nil {
             hide()
@@ -291,6 +325,7 @@ public class PopUpViewController: UIViewController {
         }
     }
     
+    ///Hides the view and call the handleButton13Pressed delegate when the 13th menu button is pressed.
     public func handleButton13Pressed() {
         if self.delegate != nil {
             hide()
@@ -298,6 +333,7 @@ public class PopUpViewController: UIViewController {
         }
     }
     
+    ///Hides the view and call the handleButton14Pressed delegate when the 14th menu button is pressed.
     public func handleButton14Pressed() {
         if self.delegate != nil {
             hide()
@@ -305,6 +341,7 @@ public class PopUpViewController: UIViewController {
         }
     }
     
+    ///Hides the view and calls the handleButton15Pressed delegate when the 15th menu button is pressed.
     public func handleButton15Pressed() {
         if self.delegate != nil {
             hide()
