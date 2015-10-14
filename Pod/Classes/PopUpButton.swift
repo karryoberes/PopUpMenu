@@ -9,20 +9,35 @@
 import UIKit
 
 @objc public protocol PopUpButtonDelegate {
+    ///Call the handleButton1Pressed delegate when the 1st menu button is pressed.
     optional func handleButton1Pressed()
+    ///Call the handleButton2Pressed delegate when the 2nd menu button is pressed.
     optional func handleButton2Pressed()
+    ///Call the handleButton3Pressed delegate when the 3rd menu button is pressed.
     optional func handleButton3Pressed()
+    ///Call the handleButton4Pressed delegate when the 4th menu button is pressed.
     optional func handleButton4Pressed()
+    ///Call the handleButton5Pressed delegate when the 5th menu button is pressed.
     optional func handleButton5Pressed()
+    ///Call the handleButton6Pressed delegate when the 6th menu button is pressed.
     optional func handleButton6Pressed()
+    ///Call the handleButton7Pressed delegate when the 7th menu button is pressed.
     optional func handleButton7Pressed()
+    ///Call the handleButton8Pressed delegate when the 8th menu button is pressed.
     optional func handleButton8Pressed()
+    ///Call the handleButton9Pressed delegate when the 9th menu button is pressed.
     optional func handleButton9Pressed()
+    ///Call the handleButton10Pressed delegate when the 10th menu button is pressed.
     optional func handleButton10Pressed()
+    ///Call the handleButton11Pressed delegate when the 11th menu button is pressed.
     optional func handleButton11Pressed()
+    ///Call the handleButton12Pressed delegate when the 12th menu button is pressed.
     optional func handleButton12Pressed()
+    ///Call the handleButton13Pressed delegate when the 13th menu button is pressed.
     optional func handleButton13Pressed()
+    ///Call the handleButton14Pressed delegate when the 14th menu button is pressed.
     optional func handleButton14Pressed()
+    ///Call the handleButton15Pressed delegate when the 15th menu button is pressed.
     optional func handleButton15Pressed()
 }
 
@@ -56,16 +71,15 @@ public class PopUpButton: UIButton, PopUpViewDelegate {
     /**
     Initializes a button with the provided specifications.
     
-    - Parameters:
-    - frame: The frame size for the button
-    - menuImage: The image for the button
-    - menuListTitle: The list of the titles to be passed in the PopUp View Controller (PopUp Menu), in an Array of String
-    - menuIconNormal: The list of the image names to be passed in  the PopUp View Controller (PopUp Menu) for Normal State
-    - menuIconHighlighted: The list of the image names to be passed in  the PopUp View Controller (PopUp Menu) for Highlighted State
-    - menuBackgroundImage: The background image for the menus to be passed in the PopUp View Controller (PopUp Menu) for Normal State
-    - menuBackgroundHighlightedImage: The background image for the menus to be passed in the PopUp View Controller (PopUp Menu) for Highlighted State
+    :param: frame The frame size for the button
+    :param: menuImage The image for the button
+    :param: menuListTitle The list of the titles to be passed in the PopUp View Controller (PopUp Menu), in an Array of String
+    :param: menuIconNormal The list of the image names to be passed in  the PopUp View Controller (PopUp Menu) for Normal State
+    :param: menuIconHighlighted The list of the image names to be passed in  the PopUp View Controller (PopUp Menu) for Highlighted State
+    :param: menuBackgroundImage The background image for the menus to be passed in the PopUp View Controller (PopUp Menu) for Normal State
+    :param: menuBackgroundHighlightedImage The background image for the menus to be passed in the PopUp View Controller (PopUp Menu) for Highlighted State
     
-    - Returns: A floating custom button that is once long pressed shows a PopUp Menu.
+    :returns: A floating custom button that is once long pressed shows a PopUp Menu.
     */
     required public init(frame: CGRect, menuImage: UIImage, menuListTitle: NSArray, menuIconNormal: NSArray, menuIconHighlighted: NSArray, menuBackgroundImage: NSString, menuBackgroundHighlightedImage: NSString) {
         super.init(frame: frame)
@@ -127,12 +141,11 @@ public class PopUpButton: UIButton, PopUpViewDelegate {
     /**
     Used to get the properties for the menus inside the PopUp View Controller (PopUp Menu) from the user.
     
-    - Parameters:
-    - buttonTitleColor: The color for the title label of the menu for Normal State
-    - buttonTitleHighlightedColor: The color for the title label of the menu for Highlighted State
-    - buttonBackgroundColor: The background color for the menu
-    - buttonSeparatorColor: The color for the separator color of the menus
-    - buttonFont: The font for the title label of the menu
+    :param: buttonTitleColor The color for the title label of the menu for Normal State
+    :param: buttonTitleHighlightedColor The color for the title label of the menu for Highlighted State
+    :param: buttonBackgroundColor The background color for the menu
+    :param: buttonSeparatorColor The color for the separator color of the menus
+    :param: buttonFont The font for the title label of the menu
     */
     public func getProperties(buttonTitleColor: UIColor, buttonTitleHighlightedColor: UIColor, buttonBackgroundColor: UIColor, buttonSeparatorColor: UIColor, buttonFont: UIFont) {
         

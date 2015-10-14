@@ -45,13 +45,19 @@ public class PopUpViewController: UIViewController {
     
     var btnHeight:CGFloat = 40
     
+    /// Color for the Title Label of the menu in PopUp View Controller (PopUp Menu)
     public var buttonTitleColor: UIColor!
+    /// Color for the Title Label of the menu when highlighted in PopUp View Controller (PopUp Menu)
     public var buttonSelectedTitleColor: UIColor!
+    /// Background color for the button in PopUp View Controller (PopUp Menu)
     public var buttonBackgroundColor: UIColor!
+    /// Color for the separator of menus in PopUp View Controller (PopUp Menu)
     public var separatorColor: UIColor!
+    /// Font for the Title Label of the menu in PopUp View Controller (PopUp Menu
     public var buttonFont: UIFont!
-    
+    /// Background image for the button in PopUp View Controller (PopUp Menu)
     public var backgroundImage: String!
+    /// Background image for the button when highlighted in PopUp View Controller (PopUp Menu)
     public var backgroundHighlightedImage: String!
     
     var returnToNormalWhenSelected = true
@@ -60,15 +66,14 @@ public class PopUpViewController: UIViewController {
     // MARK: INITIALIZE POPUP MENU PROPERTIES
     /**
     Initializes a view controller with the provided specifications from the PopUp Button.
+
+    :param: menuButtonTitles The list of the titles for the PopUp View Controller (PopUp Menu), in an Array of String
+    :param: menuButtonNormalIcons The list of the image names for the PopUp View Controller (PopUp Menu) for Normal State
+    :param: menuButtonHighlightedIcons The list of the image names for the PopUp View Controller (PopUp Menu) for Highlighted State
+    :param: menuBGImage The background image for the menus inside the PopUp View Controller (PopUp Menu) for Normal State
+    :param: menuHBGImage The background image for the menus inside the PopUp View Controller (PopUp Menu) for Highlighted State
     
-    - Parameters:
-    - menuButtonTitles: The list of the titles for the PopUp View Controller (PopUp Menu), in an Array of String
-    - menuButtonNormalIcons: The list of the image names for the PopUp View Controller (PopUp Menu) for Normal State
-    - menuButtonHighlightedIcons: The list of the image names for the PopUp View Controller (PopUp Menu) for Highlighted State
-    - menuBGImage: The background image for the menus inside the PopUp View Controller (PopUp Menu) for Normal State
-    - menuHBGImage: The background image for the menus inside the PopUp View Controller (PopUp Menu) for Highlighted State
-    
-    - Returns: A custom PopUp Menu.
+    :returns: A custom PopUp Menu.
     */
     convenience init(menuButtonTitles: NSArray!, menuButtonNormalIcons: NSArray!, menuButtonHighlightedIcons: NSArray!, menuBGImage: String!, menuHBGImage: String!) {
         self.init()
