@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "PopUpMenu"
-  s.version          = "0.2.1"
+  s.version          = "0.3"
   s.summary          = "A subclass on UIButton and UIViewController that provides a button that shows a PopUp Menu once it is long pressed."
 
 # This description is used to generate tags and improve search results.
